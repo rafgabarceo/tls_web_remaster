@@ -3,15 +3,13 @@ import React from 'react';
 
 class PrimaryArticle extends React.Component {
     render() {
-        let authorsList = this.props.authors.map(a => <a href="www.TheLaSallian.com/authors/{a}">{a}</a>).reduce((prev, curr) => [prev, ', ', curr]);
-        console.log(authorsList);
-
+        let authorsList = this.props.article.authors.map(a => <a href="https://www.TheLaSallian.com/authors/">{a}</a>).reduce((prev, curr) => [prev, ', ', curr]);
         return (
             <div className="primary_article">
                 <div className="img">
                 </div>
                 <div className="heading">
-                    Article title
+                    {this.props.title}
                 </div>
                 <div className="authors">
                     {authorsList}
