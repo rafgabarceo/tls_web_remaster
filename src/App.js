@@ -15,7 +15,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('https://thelasallian.com/wp-json/wp/v2/posts?_fields=authors,id,date,excerpt,title,link,categories&categories=4')
+        axios.get('https://thelasallian.com/wp-json/wp/v2/posts?_fields=id,authors,excerpt,title,link,categories,jetpack_featured_media_url&categories=4')
         .then(response => {
             this.setState({
                 universitySection: <Section articles={response.data}/>
