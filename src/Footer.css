@@ -12,8 +12,8 @@
     }
 
     .footer > .content {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
@@ -45,7 +45,7 @@
         flex-direction: row;
         align-items: center;
 
-        padding-left: 5vw;
+        padding-left: 10vw;
     }
 
     .footer > .navbar > a {
