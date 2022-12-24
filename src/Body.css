@@ -74,7 +74,7 @@
 
     .body > .section {
         background-color: red;
-        height: 45vh;
+        height: 50vh;
         margin-bottom: 5vh;
     }
 
@@ -89,7 +89,7 @@
             .body > .section > .articles > .primary-article {
                 background-color: pink;
                 width: 100%;
-                height: 40vh;
+                height: 42vh;
 
                 display: flex;
                 align-items: center;
@@ -148,3 +148,51 @@
                                 width: 90%;
                                 background-color: aquamarine;
                             }
+
+            .body > .section > .articles > .secondary-articles {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 2vh 0vw;
+                /* background-color: green; */
+            }
+
+                .body > .section > .articles > .secondary-articles > .secondary {
+                    background-color: aquamarine;
+                    height: 20vh;
+                    width: 90%;
+                    border-radius: 20px;
+
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .shade {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+
+                    background-color: #80ffd447;
+                    z-index: 1;
+
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {
+                    background-color: red;
+                    width: 90%;
+                    height: 7vh;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    padding-bottom: 2vh;
+                }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .title {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors {
+                        font-size: .90rem;
+                        padding-bottom: 1vh;
+                    }
