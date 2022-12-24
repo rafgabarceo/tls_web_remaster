@@ -74,6 +74,77 @@
 
     .body > .section {
         background-color: red;
-        height: 30vh;
+        height: 45vh;
         margin-bottom: 5vh;
     }
+
+        .body > .section > .articles {
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .body > .section > .articles > .primary-article {
+                background-color: pink;
+                width: 100%;
+                height: 40vh;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px;
+            }
+
+                .body > .section > .articles > .primary-article > .primary {
+                    background-color: aquamarine;
+                    height: 100%;
+                    width: 90%;
+                    border-radius: 20px;
+
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                    .body > .section > .articles > .primary-article > .primary > .image {
+                        width: 100%;
+                        z-index: 0;
+                    }
+
+                    .body > .section > .articles > .primary-article > .primary > .shade {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+
+                        background-color: #80ffd447;
+                        z-index: 1;
+
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+                        .body > .section > .articles > .primary-article > .primary > .shade > .contents {
+                            background-color: red;
+                            width: 100%;
+                            height: 15vh;
+                            padding-left: 1vw;
+                            padding-right: 1vw;
+                            padding-bottom: 2vh;
+                        }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .title {
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors {
+                                font-size: .90rem;
+                                padding-bottom: 1vh;
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .snippet {
+                                padding-bottom: 1vh;
+                                width: 90%;
+                                background-color: aquamarine;
+                            }
