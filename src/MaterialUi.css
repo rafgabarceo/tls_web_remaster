@@ -1,0 +1,11 @@
+/* this is for materials ui icons */
+
+.material-symbols-outlined {
+    transform: scale(2);
+    background-color: aqua;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}

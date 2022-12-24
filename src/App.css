@@ -1,4 +1,4 @@
-html, body, p {
+html, body, p, hr {
     margin: 0px;
     padding: 0px;
 }
@@ -7,33 +7,8 @@ html, body, p {
     display: grid;
 }
 
-.wrapper .header {
-    background-color: blue;
-    min-height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.wrapper .body {
-    background-color: green;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
 
-    .body .section {
-        background-color: red;
-        height: 30vh;
-    }
-
-.wrapper .footer {
-    background-color: aqua;
-    height: 20vh;
-}
 
 
 
