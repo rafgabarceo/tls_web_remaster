@@ -1,4 +1,4 @@
-.wrapper .header {
+.wrapper > .header {
     background-color: blue;
     min-height: 20vh;
     display: flex;
@@ -7,14 +7,14 @@
     justify-content: center;
 }
 
-    .header hr {
+    .header > hr {
         width: 100%;
         border-right : 0;
         border-left: 0;
         border-top: 2px solid rgb(0, 0, 0);
     }
 
-    .header .navbar {
+    .header > .navbar {
         width: 100%;
         height: 8vh;
         display: flex;
@@ -23,12 +23,12 @@
         background-color: yellow;
     }
 
-        .navbar .contents {
+        .header > .navbar > .contents {
             width: 80%;
             display: flex;
             justify-content: space-between;
         }
 
-        .navbar a {
+        .header > .navbar > .contents > a {
             font-size: 1.2rem;
         }
