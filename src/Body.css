@@ -1,17 +1,33 @@
-.wrapper .body {
+.wrapper > .body {
     background-color: green;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
-    padding-left: 5vw;
-    padding-right: 5vw;
+    justify-content: center;
+
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 0vh;
 }
 
-    .body .section {
+    .body > .banner {
+        background-color: red;
+        height: 80vh;
+        margin-bottom: 5vh;
+        border-radius: 20px;
+    }
+
+    .body > hr {
+        width: 100%;
+        border-right : 0;
+        border-left: 0;
+        border-bottom: 0;
+        border-top: 1.5px solid rgb(0, 0, 0);
+        margin-bottom: 5vh;
+    }
+
+    .body > .section {
         background-color: red;
         height: 30vh;
+        margin-bottom: 5vh;
     }
