@@ -1,26 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --gray: #D9D9D9;
+    --univ-green: #003300;
+    --menage-blue: #012150;
+    --sports-yellow: #012150;
+    --vanguard-purple: #012150;
+    --opinion-red: #411715;
+
+    --transparent-gray: rgba(0, 0, 0, 0.322);
+}
+
 html, body, p, hr, h1, h2, h3 {
     margin: 0px;
     padding: 0px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .wrapper {
     display: grid;
-}
-
-
-
-
-
-
-/* for testing purposes */
-.primary-article {
-    background-color: red;
-    max-width: 50vw;
-    height: 25vh;
-    border-radius: 12px;
-}
-
-.primary-article .heading {
-    background-color: pink;
-    font-size: 2rem;
 }

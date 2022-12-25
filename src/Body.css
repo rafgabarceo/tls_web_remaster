@@ -1,5 +1,5 @@
 .wrapper > .body {
-    background-color: green;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
 }
 
     .body > .banner {
-        background-color: red;
+        /* background-color: red; */
         max-height: 75vh;
         margin-bottom: 5vh;
         border-radius: 20px;
@@ -30,7 +30,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background-color: #80ffd447;
+            background-color: var(--transparent-gray);
             z-index: 1;
 
             display: flex;
@@ -38,7 +38,7 @@
         }
 
         .body > .banner > .shade > .contents {
-            background-color: red;
+            /* background-color: red; */
             width: 100%;
             max-height: 18vh;
             height: 18vh;
@@ -50,17 +50,20 @@
         .body > .banner > .shade > .contents > .title {
             font-size: 2.5rem;
             font-weight: bold;
+            color: var(--white);
         }
 
         .body > .banner > .shade > .contents > .authors {
             font-size: .90rem;
             padding-bottom: 1vh;
+            color: var(--white);
         }
 
         .body > .banner > .shade > .contents > .snippet {
             padding-bottom: 1vh;
             width: 90%;
-            background-color: aquamarine;
+            color: var(--white);
+            /* background-color: aquamarine; */
         }
 
     .body > hr {
@@ -68,18 +71,31 @@
         border-right : 0;
         border-left: 0;
         border-bottom: 0;
-        border-top: 1.5px solid rgb(0, 0, 0);
+        border-top: 1.5px solid var(--gray);
         margin-bottom: 5vh;
     }
 
     .body > .section {
-        background-color: red;
+        /* background-color: red; */
         height: 50vh;
         margin-bottom: 5vh;
     }
 
+        .body > .section > .heading {
+            padding-left: 2vw;
+            padding-bottom: 1vh;
+        }
+
+            .body > .section#University > .heading {
+                color: var(--univ-green);
+            }
+
+            .body > .section#Menagerie > .heading {
+                color: var(--menage-blue);
+            }
+
         .body > .section > .articles {
-            background-color: yellow;
+            /* background-color: yellow; */
             display: grid;
             grid-template-columns: 50% 50%;
             align-items: center;
@@ -87,7 +103,7 @@
         }
 
             .body > .section > .articles > .primary-article {
-                background-color: pink;
+                /* background-color: pink; */
                 width: 100%;
                 height: 42vh;
 
@@ -98,7 +114,7 @@
             }
 
                 .body > .section > .articles > .primary-article > .primary {
-                    background-color: aquamarine;
+                    /* background-color: aquamarine; */
                     height: 100%;
                     width: 90%;
                     border-radius: 20px;
@@ -108,7 +124,7 @@
                 }
 
                     .body > .section > .articles > .primary-article > .primary > .image {
-                        width: 100%;
+                        width: 200%;
                         z-index: 0;
                     }
 
@@ -117,7 +133,7 @@
                         height: 100%;
                         width: 100%;
 
-                        background-color: #80ffd447;
+                        background-color: var(--transparent-gray);
                         z-index: 1;
 
                         display: flex;
@@ -125,7 +141,7 @@
                     }
 
                         .body > .section > .articles > .primary-article > .primary > .shade > .contents {
-                            background-color: red;
+                            /* background-color: red; */
                             width: 100%;
                             height: 15vh;
                             padding-left: 1vw;
@@ -134,19 +150,26 @@
                         }
 
                             .body > .section > .articles > .primary-article > .primary > .shade > .contents > .title {
-                                font-size: 1.5rem;
+                                font-size: 1.2rem;
+                                padding-right: 0.8vw;
                                 font-weight: bold;
+                                color: var(--white);
                             }
 
                             .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors {
-                                font-size: .90rem;
+                                font-size: .80rem;
                                 padding-bottom: 1vh;
+                                color: var(--white);
                             }
 
                             .body > .section > .articles > .primary-article > .primary > .shade > .contents > .snippet {
+                                font-size: .90rem;
                                 padding-bottom: 1vh;
                                 width: 90%;
-                                background-color: aquamarine;
+                                color: var(--white);
+                                text-align: justify;
+
+                                /* background-color: aquamarine; */
                             }
 
             .body > .section > .articles > .secondary-articles {
@@ -157,7 +180,7 @@
             }
 
                 .body > .section > .articles > .secondary-articles > .secondary {
-                    background-color: aquamarine;
+                    /* background-color: aquamarine; */
                     height: 20vh;
                     width: 90%;
                     border-radius: 20px;
@@ -171,7 +194,7 @@
                     height: 100%;
                     width: 100%;
 
-                    background-color: #80ffd447;
+                    background-color: var(--transparent-gray);
                     z-index: 1;
 
                     display: flex;
@@ -179,7 +202,7 @@
                 }
 
                 .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {
-                    background-color: red;
+                    /* background-color: red; */
                     width: 90%;
                     height: 7vh;
                     padding-left: 1vw;
@@ -188,11 +211,13 @@
                 }
 
                     .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .title {
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         font-weight: bold;
+                        color: var(--white);
                     }
 
                     .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors {
-                        font-size: .90rem;
+                        font-size: .80rem;
                         padding-bottom: 1vh;
+                        color: var(--white);
                     }

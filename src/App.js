@@ -28,7 +28,6 @@ class App extends React.Component {
     }
     
     render() {
-        // let universitySection = <Section articles={universityArticles}/>;
         return (
             this.state.universitySection
         );

@@ -11,8 +11,8 @@ import './MaterialUi.css';
 //Article components
 import App from './App.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('Menagerie'));
 
 root.render(
-  // <App/>
+  <App/>
 );

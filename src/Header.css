@@ -1,5 +1,5 @@
 .wrapper > .header {
-    background-color: blue;
+    background-color: var(--white);
     min-height: 20vh;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
         border-right : 0;
         border-left: 0;
         border-bottom: 0;
-        border-top: 2px solid rgb(0, 0, 0);
+        border-top: 2px solid var(--gray);
     }
 
     .header > .navbar {
@@ -21,7 +21,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: yellow;
+        background-color: var(--white);
     }
 
         .header > .navbar > .contents {
