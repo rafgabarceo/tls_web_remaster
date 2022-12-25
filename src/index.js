@@ -11,8 +11,25 @@ import './MaterialUi.css';
 //Article components
 import App from './App.js';
 
-const root = ReactDOM.createRoot(document.getElementById('Menagerie'));
+const university = ReactDOM.createRoot(document.getElementById('University'));
+const menagerie = ReactDOM.createRoot(document.getElementById('Menagerie'));
+const sports = ReactDOM.createRoot(document.getElementById('Sports'));
+const vanguard = ReactDOM.createRoot(document.getElementById('Vanguard'));
+const opinion = ReactDOM.createRoot(document.getElementById('Opinion'));
 
-root.render(
-  <App/>
+university.render(
+  <App section='University'/>
 );
+menagerie.render(
+  <App section='Menagerie'/>
+);
+sports.render(
+  <App section='Sports'/>
+);
+vanguard.render(
+  <App section='Vanguard'/>
+);
+opinion.render(
+  <App section='Opinion'/>
+);
+

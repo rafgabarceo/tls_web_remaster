@@ -12,7 +12,7 @@
     --transparent-gray: rgba(0, 0, 0, 0.322);
 }
 
-html, body, p, hr, h1, h2, h3 {
+html, body, p, hr, h1, h2, h3, a {
     margin: 0px;
     padding: 0px;
     font-family: 'IBM Plex Sans', sans-serif;

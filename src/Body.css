@@ -149,7 +149,7 @@
                             padding-bottom: 2vh;
                         }
 
-                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .title {
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > a > .title {
                                 font-size: 1.2rem;
                                 padding-right: 0.8vw;
                                 font-weight: bold;
@@ -168,7 +168,6 @@
                                 width: 90%;
                                 color: var(--white);
                                 text-align: justify;
-
                                 /* background-color: aquamarine; */
                             }
 
@@ -204,20 +203,21 @@
                 .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {
                     /* background-color: red; */
                     width: 90%;
-                    height: 7vh;
+                    max-height: 20vh;
+                    min-height: 1vh;
                     padding-left: 1vw;
                     padding-right: 1vw;
-                    padding-bottom: 2vh;
+                    padding-bottom: 1vh;
                 }
 
-                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .title {
-                        font-size: 1.2rem;
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > a > .title {
+                        font-size: 0.9rem;
                         font-weight: bold;
                         color: var(--white);
                     }
 
                     .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors {
-                        font-size: .80rem;
+                        font-size: .8rem;
                         padding-bottom: 1vh;
                         color: var(--white);
                     }
