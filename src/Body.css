@@ -23,7 +23,9 @@
 
         .body > .banner > .image {
             width: 100%;
+            height: 100%;
             z-index: 0;
+            object-fit: cover;
         }
 
         .body > .banner > .shade {
@@ -124,8 +126,10 @@
                 }
 
                     .body > .section > .articles > .primary-article > .primary > .image {
-                        width: 200%;
+                        width: 100%;
+                        height: 100%;
                         z-index: 0;
+                        object-fit: cover;
                     }
 
                     .body > .section > .articles > .primary-article > .primary > .shade {
@@ -198,6 +202,13 @@
 
                     display: flex;
                     flex-direction: column-reverse;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .image {
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    object-fit: cover;
                 }
 
                 .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {

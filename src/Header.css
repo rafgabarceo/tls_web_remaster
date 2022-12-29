@@ -7,6 +7,12 @@
     justify-content: center;
 }
 
+    .header > .logo {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        width: 28vw;
+    }
+
     .header > hr {
         width: 100%;
         border-right : 0;
