@@ -37,6 +37,12 @@
             justify-content: space-between;
         }
 
+            .footer > .content > .end > span > #to-the-top:hover {
+                color: var(--dark-gray);
+                cursor: pointer;
+            }
+
+
     .footer > .navbar {
         height: 4vh;
         background-color: var(--white);

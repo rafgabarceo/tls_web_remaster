@@ -39,3 +39,7 @@
         .header > .navbar > .contents > a {
             font-size: 1.2rem;
         }
+
+        .header > .navbar > .contents > a:hover {
+            color: var(--dark-gray);
+        }
