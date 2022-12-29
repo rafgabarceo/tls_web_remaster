@@ -11,5 +11,5 @@ I made this readme just so we can have a readme.md. This is the repository for t
 # Todo
 - Add error boundaries
 - Convert class-based components to functional components
-- Improve image placement
 - Have banner articles moving
+- On hover features
