@@ -3,26 +3,31 @@ import React from 'react';
 class SecondaryArticle extends React.Component {
 
     render() {
-        // let authorsList = this.props.article.authors.map(author => <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>).reduce((prev, curr) => [prev, ', ', curr]);
-        
-        let authorsList = '';
-        for(let i=0; i < this.props.article.authors.length; i++) {
-            if(this.props.article.authors.length > 2) {
-                if (this.props.article.authors.length-1 == i) {
-                    authorsList += 'and ' + this.props.article.authors[i].display_name;
-                } else {
-                    authorsList += this.props.article.authors[i].display_name + ', ';
+        let authorsList = this.props.article.authors.map((author, i, authors) => 
+            {
+                if(authors.length === 1) return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>);
+                else if (authors.length === 2) {
+                    if (i+1 === authors.length) 
+                        return (
+                        <React.Fragment>
+                            <span> and </span>
+                            <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>
+                        </React.Fragment>
+                        );
+                    else 
+                        return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>);
+                } else if(authors.length > 2) {
+                    if (i + 1 === authors.length)
+                        return (
+                        <React.Fragment>
+                            <span> and </span>
+                            <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>
+                        </React.Fragment>
+                        );
+                    else
+                        return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}, </a>);
                 }
-            } else if(this.props.article.authors.length == 2) {
-                if (this.props.article.authors.length-1 == i) {
-                    authorsList += this.props.article.authors[i].display_name;
-                } else {
-                    authorsList += this.props.article.authors[i].display_name + ' and ';
-                }
-            } else {
-                authorsList = this.props.article.authors[i].display_name;
-            }
-        }
+            });
         
         return (
             <div className="secondary">

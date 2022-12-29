@@ -130,6 +130,16 @@
                         height: 100%;
                         z-index: 0;
                         object-fit: cover;
+                        transform: translate(0%, 0%);
+
+                        transition-timing-function: linear;
+                        transition: width 0.5s, height 0.5s, transform 0.5s;
+                    }
+
+                    .body > .section > .articles > .primary-article:hover > .primary > .image {
+                        width: 110%;
+                        height: 110%;
+                        transform: translate(-5%, -5%);
                     }
 
                     .body > .section > .articles > .primary-article > .primary > .shade {
@@ -142,6 +152,10 @@
 
                         display: flex;
                         flex-direction: column-reverse;
+                    }
+
+                    .body > .section > .articles > .primary-article:hover > .primary > .shade {
+                        background-color: var(--transparent-dark-gray);
                     }
 
                         .body > .section > .articles > .primary-article > .primary > .shade > .contents {
@@ -160,10 +174,18 @@
                                 color: var(--white);
                             }
 
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > a > .title:hover {
+                                color: var(--gray);
+                            }
+
                             .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors {
                                 font-size: .80rem;
                                 padding-bottom: 1vh;
                                 color: var(--white);
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors > a:hover {
+                                color: var(--gray);
                             }
 
                             .body > .section > .articles > .primary-article > .primary > .shade > .contents > .snippet {
@@ -209,6 +231,20 @@
                     height: 100%;
                     z-index: 0;
                     object-fit: cover;
+                    transform: translate(0%, 0%);
+
+                    transition-timing-function: linear;
+                    transition: width 0.5s, height 0.5s, transform 0.5s;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary:hover > .image {
+                    width: 110%;
+                    height: 110%;
+                    transform: translate(-5%, -5%);
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary:hover > .shade {
+                    background-color: var(--transparent-dark-gray);
                 }
 
                 .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {
@@ -227,8 +263,16 @@
                         color: var(--white);
                     }
 
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > a > .title:hover {
+                        color: var(--gray);
+                    }
+
                     .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors {
                         font-size: .8rem;
                         padding-bottom: 1vh;
                         color: var(--white);
+                    }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors > a:hover {
+                        color: var(--gray);
                     }

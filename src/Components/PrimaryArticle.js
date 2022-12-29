@@ -3,9 +3,32 @@ import React from 'react';
 
 class PrimaryArticle extends React.Component {
     render() {
-        console.log(this.props.article);
-        let authorsList = this.props.article.authors.map(author => <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>).reduce((prev, curr) => [prev, ', ', curr]);
-        
+        let authorsList = this.props.article.authors.map((author, i, authors) => 
+            {
+                if(authors.length === 1) return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>);
+                else if (authors.length === 2) {
+                    if (i+1 === authors.length) 
+                        return (
+                        <React.Fragment>
+                            <span> and </span>
+                            <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>
+                        </React.Fragment>
+                        );
+                    else 
+                        return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>);
+                } else if(authors.length > 2) {
+                    if (i + 1 === authors.length)
+                        return (
+                        <React.Fragment>
+                            <span> and </span>
+                            <a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}</a>
+                        </React.Fragment>
+                        );
+                    else
+                        return (<a href={`https://www.TheLaSallian.com/author/${author.slug}`}>{author.display_name}, </a>);
+                }
+            });
+
         let cleanedSnippet = "";
         console.log(this.props.article.title.rendered.length);
         if(this.props.article.title.rendered.length < 50) {

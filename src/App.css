@@ -10,6 +10,13 @@
     --opinion-red: #411715;
 
     --transparent-gray: rgba(0, 0, 0, 0.322);
+    --transparent-dark-gray: rgba(0, 0, 0, 0.459);
+
+    --transparent-univ-green: rgba(0, 51, 0, 0.459);
+    --transparent-menage-blue: rgb(1, 33, 80);
+    --transparent-sports-yellow: rgb(1, 33, 80);
+    --transparent-vanguard-purple: rgb(1, 33, 80);
+    --transparent-opinion-red: rgb(65, 23, 21);
 }
 
 html, body, p, hr, h1, h2, h3, a {
