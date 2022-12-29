@@ -1,23 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --white: #FFFFFF;
-    --gray: #D9D9D9;
-    --dark-gray: #4b4b4b;
-    --univ-green: #003300;
-    --menage-blue: #012150;
-    --sports-yellow: #012150;
-    --vanguard-purple: #012150;
-    --opinion-red: #411715;
+    --white: rgb(255, 255, 255);
+    --gray: rgb(217, 217, 217);
+    --dark-gray: rgb(75, 75, 75);
+    --univ-green: rgb(0, 51, 0);
+    --menage-blue: rgb(1, 33, 80);
+    --sports-yellow: rgb(149, 127, 13);
+    --vanguard-purple: rgb(43, 11, 84);
+    --opinion-red: rgb(65, 23, 21);
 
     --transparent-gray: rgba(0, 0, 0, 0.322);
     --transparent-dark-gray: rgba(0, 0, 0, 0.459);
-
-    --transparent-univ-green: rgba(0, 51, 0, 0.459);
-    --transparent-menage-blue: rgb(1, 33, 80);
-    --transparent-sports-yellow: rgb(1, 33, 80);
-    --transparent-vanguard-purple: rgb(1, 33, 80);
-    --transparent-opinion-red: rgb(65, 23, 21);
 }
 
 html, body, p, hr, h1, h2, h3, a {

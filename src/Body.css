@@ -96,6 +96,18 @@
                 color: var(--menage-blue);
             }
 
+            .body > .section#Sports > .heading {
+                color: var(--sports-yellow);
+            }
+
+            .body > .section#Vanguard > .heading {
+                color: var(--vanguard-purple);
+            }
+
+            .body > .section#Opinion > .heading {
+                color: var(--opinion-red);
+            }
+
         .body > .section > .articles {
             /* background-color: yellow; */
             display: grid;
