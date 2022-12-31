@@ -26,6 +26,7 @@ export async function getStaticProps() {
     return {
         props: {
             articles: data.slice(0,20),
-        }
+        },
+        revalidate: 10,
     };
 }
