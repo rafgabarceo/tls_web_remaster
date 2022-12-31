@@ -1,5 +1,10 @@
+import Link from "next/link";
+
 export default function BannerArticle({article}) {
     return (
-        <p dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
+        <Link href={`/presents/${article.slug}`}>
+            <p dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
+        </Link>
+        
     );
 }
