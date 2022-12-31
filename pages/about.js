@@ -15,6 +15,7 @@ export async function getStaticProps() {
     return {
         props: {
             staffers: data,
-        }
+        },
+        revalidation: 1,
     };
 }
