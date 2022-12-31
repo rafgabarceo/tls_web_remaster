@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import SecondaryArticles from "../components/lists/SecondaryArticles";
+import BannerArticles from "../components/BannerArticles";
+import Sections from "../components/Sections";
 
 export default function Home({sections}) {
     return (
@@ -17,37 +18,15 @@ export default function Home({sections}) {
                     <li>Vanguard</li>
                 </ul>
             <hr />
-                <h2>banner article</h2>
-                <ul>
-                    <Link href={`/presents/${sections[0].articles[0].slug}`}><li>{sections[0].section} - <span dangerouslySetInnerHTML={{__html: sections[0].articles[0].title.rendered}}/></li></Link>
-                    <li>{sections[1].section} - <span dangerouslySetInnerHTML={{__html: sections[1].articles[0].title.rendered}}/></li>
-                    <li>{sections[2].section} - <span dangerouslySetInnerHTML={{__html: sections[2].articles[0].title.rendered}}/></li>
-                    <li>{sections[3].section} - <span dangerouslySetInnerHTML={{__html: sections[3].articles[0].title.rendered}}/></li>
-                    <li>{sections[4].section} - <span dangerouslySetInnerHTML={{__html: sections[4].articles[0].title.rendered}}/></li>
-                </ul>
+                <BannerArticles sections={sections}/>
             <hr />
-            <hr />
-                <h2>article sections</h2>
-                <h3>univ</h3>
-                <ul>
-                    <li>{sections[0].section} {sections[0].articles.length}</li>
-                </ul>
-                <h3>menage</h3>
-                <ul>
-                    <li>{sections[1].section} {sections[1].articles.length}</li>
-                </ul>
+                <Sections sections={sections}/>
             <hr />
         </React.Fragment>
     );
 }
 
-export async function getStaticProps() {
-    //4 == univ
-    //8 == menage
-    //6 == sports
-    //1883 == vanguard
-    //5 == opinion
-
+export async function getServerSideProps() {
     const universityResponse = await fetch('https://thelasallian.com/wp-json/wp/v2/posts?_fields=id,authors,excerpt,title,slug,categories,jetpack_featured_media_url&per_page=5&categories=4');
     const universityData = await universityResponse.json();
 
@@ -67,27 +46,31 @@ export async function getStaticProps() {
         props: {
             sections: [
                 {
-                    section: 'University',
+                    name: 'University',
+                    category: 4,
                     articles: universityData,
                 },
                 {
-                    section: 'Menagerie',
+                    name: 'Menagerie',
+                    category: 8,
                     articles: menagerieData,
                 },
                 {
-                    section: 'Sports',
+                    name: 'Sports',
+                    category: 6,
                     articles: sportsData,
                 },
                 {
-                    section: 'Vanguard',
+                    name: 'Vanguard',
+                    category: 1883,
                     articles: vanguardData,
                 },
                 {
-                    section: 'Opinions',
+                    name: 'Opinions',
+                    category: 5,
                     articles: opinionData,
                 },
             ],
         },
-        revalidate: 1,
     };
 }
