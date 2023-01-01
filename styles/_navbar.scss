@@ -1,5 +1,6 @@
+@import 'colors';
+
 .navbar {
-    background-color: red;
     position: sticky;
     top: -1px;
 
@@ -12,13 +13,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    img {
-        content: url("../public/tls-minimal.svg");
-        width: 180px;
+    border-top: 1px $gray solid;
+    border-bottom: 1px $gray solid;
 
-        @media only screen and (max-width: 650px) {
-            width: 0px;
-        }
+    .search {
+        width: 30px;
     }
 
     ul {
@@ -27,9 +26,8 @@
         align-items: center;
 
         li {
-            background-color: green;
-            margin-left: 1vw;
-            margin-right: 1vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
         }
 
     }
