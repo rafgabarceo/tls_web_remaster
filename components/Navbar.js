@@ -10,6 +10,8 @@ export default function Navbar() {
         setIsClicked(prevState => !prevState);
     };
 
+    // use useEffect here and find window. Source: https://nextjs.org/docs/messages/react-hydration-error
+
     return (
         <div className={`${styles.navbar} sticky`}>
             <Link href="/"><img className={`${styles.nav_logo} nav_logo`} alt="TLS logo"/></Link>
