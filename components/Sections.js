@@ -7,6 +7,7 @@ export default function Sections(props) {
         <>
             <h2>sections</h2>
             {sections}
+            <hr />
         </>
     );
 }

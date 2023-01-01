@@ -5,6 +5,5 @@ export default function BannerArticle({article}) {
         <Link href={`/presents/${article.slug}`}>
             <p dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
         </Link>
-        
     );
 }

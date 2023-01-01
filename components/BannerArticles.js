@@ -6,6 +6,7 @@ export default function BannerArticles({sections}) {
         <>
             <h2>Banner articles</h2>
             {bannerArticles}
+            <hr />
         </>
     );
 }

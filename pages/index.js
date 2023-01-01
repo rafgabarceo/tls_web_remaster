@@ -1,28 +1,19 @@
 import Link from "next/link";
-import React from "react";
 
 import BannerArticles from "../components/BannerArticles";
 import Sections from "../components/Sections";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 export default function Home({sections}) {
     return (
-        <React.Fragment>
-            <h1>TheLaSallian</h1>
-            <hr />
-                <h2>navbar</h2>
-                <ul>
-                    <li><Link href='/about'>About</Link></li>
-                    <li>Univ</li>
-                    <li>Menage</li>
-                    <li>Sports</li>
-                    <li>Vanguard</li>
-                </ul>
-            <hr />
-                <BannerArticles sections={sections}/>
-            <hr />
-                <Sections sections={sections}/>
-            <hr />
-        </React.Fragment>
+        <>
+            <Header/>
+            <BannerArticles sections={sections}/>
+            <Sections sections={sections}/>
+            <Footer/>
+        </>
     );
 }
 
