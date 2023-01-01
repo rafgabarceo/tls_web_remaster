@@ -1,0 +1,36 @@
+.navbar {
+    background-color: red;
+    position: sticky;
+    top: -1px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    img {
+        content: url("../public/tls-minimal.svg");
+        width: 180px;
+
+        @media only screen and (max-width: 650px) {
+            width: 0px;
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        li {
+            background-color: green;
+            margin-left: 1vw;
+            margin-right: 1vw;
+        }
+
+    }
+}

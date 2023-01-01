@@ -1,0 +1,32 @@
+.logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 1000px) {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    img {
+        content: url("../public/tls.svg");
+        width: 800px;
+
+        @media only screen and (max-width: 1000px) {
+            width: 80%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            content: url("../public/tls-minimal.svg");
+        }
+    }
+}
