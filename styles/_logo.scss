@@ -1,32 +1,104 @@
-.logo {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
+@import 'colors';
 
-    @media only screen and (max-width: 1000px) {
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
+@mixin mobileLogo($isMobile) {
+    // add logic here
+    @if $isMobile {
+        position: sticky;
+        top: -1px;
 
-    a {
+        display: grid;
+        grid-template-columns: auto 80% auto;
+        background-color: $white;
+        border-top: 2px $gray solid;
+        border-bottom: 2px $gray solid;
+
+        padding-left: 3vw;
+        padding-right: 3vw;
+
+        
+        .menuDiv {
+            display: block;
+
+            .menuImg {
+                height: 50px;
+            }
+        }
+
+        .searchDiv {
+            display: block;
+
+            .searchImg {
+                height: 50px;
+            }
+        }
+
+        .logoDiv {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                .logo_img {
+                    content: url("../public/tls-minimal.svg");
+                    height: 50px;
+                }
+            }
+        }
+        
+    }@else {
+        padding-top: 30px;
+        padding-bottom: 30px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-    
-    img {
-        content: url("../public/tls.svg");
-        width: 800px;
 
         @media only screen and (max-width: 1000px) {
-            width: 80%;
+            padding-top: 3%;
+            padding-bottom: 3%;
         }
 
-        @media only screen and (max-width: 500px) {
-            content: url("../public/tls-minimal.svg");
+        .menuDiv {
+            display: none;
         }
+
+        .searchDiv {
+            display: none;
+        }
+
+        .logoDiv {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                .logo_img {
+                    content: url("../public/tls.svg");
+                    width: 800px;
+                    height: 90%;
+
+                    @media only screen and (max-width: 1000px) {
+                        width: 80%;
+                        height: 200px;
+                    }
+
+                    @media only screen and (max-width: 700px) {
+                        content: url("../public/tls-minimal.svg");
+                        height: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.logo {
+    @include mobileLogo($isMobile: false);
+
+    @media only screen and (max-width: 590px) {
+        @include mobileLogo($isMobile: true);
     }
 }

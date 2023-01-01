@@ -3,19 +3,11 @@ import styles from '../styles/Home.module.scss';
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Navbar() {
-    const [isClicked, setIsClicked] = useState(false);
-
-    const handleOnClick = () => {
-        setIsClicked(prevState => !prevState);
-    };
-
-    // use useEffect here and find window. Source: https://nextjs.org/docs/messages/react-hydration-error
-
+export default function Navbar(props) {
     return (
         <div className={`${styles.navbar} sticky`}>
-            <Link href="/"><img className={`${styles.nav_logo} nav_logo`} alt="TLS logo"/></Link>
-            {isClicked ? 
+            <Link href="/" className={styles.nav_logo_link}><img className={`${styles.nav_logo} nav_logo`} alt="TLS logo"/></Link>
+            {props.isSearchClicked ? 
                 <ul>
                     <input type="text" /> 
                 </ul>
@@ -29,7 +21,7 @@ export default function Navbar() {
                     <Link href="/about"><li>About Us</li></Link>
                 </ul>
             }
-            <div className={styles.searchDiv}><img onClick={handleOnClick} className={styles.search} src="./search.svg" alt="" /></div>
+            <div className={styles.searchDiv}><img className={styles.search} onClick={props.handleOnClickSearch} src="./search.svg" alt="" /></div>
         </div>
     );
 

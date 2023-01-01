@@ -47,9 +47,5 @@ hr {
             content: url("../public/tls-star.svg");
             width: 50px;
         }
-
-        @media only screen and (max-width: 600px) {
-            width: 0px;
-        }
     }
 }

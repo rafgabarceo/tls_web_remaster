@@ -1,6 +1,17 @@
 @import 'colors';
 
+@mixin mobileNavbar($isMobile) {
+    // add logic here
+    @if $isMobile {
+        display: none;
+    } @else {
+        display: block;
+    }
+
+}
+
 .navbar {
+    background-color: $white;
     position: sticky;
     top: -1px;
 
@@ -10,8 +21,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    border-top: 1px $gray solid;
-    border-bottom: 1px $gray solid;
+    border-top: 2px $gray solid;
+    border-bottom: 2px $gray solid;
 
     @media only screen and (max-width: 1680px) {
         grid-template-columns: auto 45% auto;
@@ -30,8 +41,13 @@
         grid-template-columns: auto 70% auto;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
+        grid-template-columns: auto 80% auto;
+    }
+
+    @media only screen and (max-width: 590px) {
         grid-template-columns: auto 90% auto;
+        @include mobileNavbar($isMobile: true);
     }
 
     input {
