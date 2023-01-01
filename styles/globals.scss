@@ -21,8 +21,13 @@ hr {
 
 // We need Modules for each CSS style we want in Next.js, unfortunately. So this guy's here...
 .sticky {
+    a {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
     .nav_logo {
-        content: url("../public/tls-minimal.svg");
+        content: url("../public/tls-minimal.svg");        
         width: 0;
         opacity: 0;
         transition: opacity .2s;
@@ -43,7 +48,7 @@ hr {
             width: 50px;
         }
 
-        @media only screen and (max-width: 650px) {
+        @media only screen and (max-width: 600px) {
             width: 0px;
         }
     }
