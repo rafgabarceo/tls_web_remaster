@@ -2,3 +2,29 @@
     margin: 0;
     padding: 0;
 }
+
+.logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: red;
+
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: green;
+        }
+
+    }
+}
