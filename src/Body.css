@@ -1,0 +1,290 @@
+.wrapper > .body {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+}
+
+    .body > .banner {
+        /* background-color: red; */
+        max-height: 75vh;
+        margin-bottom: 5vh;
+        border-radius: 20px;
+        max-width: 100vw;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+        .body > .banner > .image {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .body > .banner > .shade {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: var(--transparent-gray);
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .body > .banner > .shade > .contents {
+            /* background-color: red; */
+            width: 100%;
+            max-height: 18vh;
+            height: 18vh;
+            padding-bottom: 4vh;
+            padding-left: 4vw;
+            padding-right: 4vw;
+        }
+
+        .body > .banner > .shade > .contents > .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .body > .banner > .shade > .contents > .authors {
+            font-size: .90rem;
+            padding-bottom: 1vh;
+            color: var(--white);
+        }
+
+        .body > .banner > .shade > .contents > .snippet {
+            padding-bottom: 1vh;
+            width: 90%;
+            color: var(--white);
+            /* background-color: aquamarine; */
+        }
+
+    .body > hr {
+        width: 100%;
+        border-right : 0;
+        border-left: 0;
+        border-bottom: 0;
+        border-top: 1.5px solid var(--gray);
+        margin-bottom: 5vh;
+    }
+
+    .body > .section {
+        /* background-color: red; */
+        height: 50vh;
+        margin-bottom: 5vh;
+    }
+
+        .body > .section > .heading {
+            padding-left: 2vw;
+            padding-bottom: 1vh;
+        }
+
+            .body > .section#University > .heading {
+                color: var(--univ-green);
+            }
+
+            .body > .section#Menagerie > .heading {
+                color: var(--menage-blue);
+            }
+
+            .body > .section#Sports > .heading {
+                color: var(--sports-yellow);
+            }
+
+            .body > .section#Vanguard > .heading {
+                color: var(--vanguard-purple);
+            }
+
+            .body > .section#Opinion > .heading {
+                color: var(--opinion-red);
+            }
+
+        .body > .section > .articles {
+            /* background-color: yellow; */
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .body > .section > .articles > .primary-article {
+                /* background-color: pink; */
+                width: 100%;
+                height: 42vh;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px;
+            }
+
+                .body > .section > .articles > .primary-article > .primary {
+                    /* background-color: aquamarine; */
+                    height: 100%;
+                    width: 90%;
+                    border-radius: 20px;
+
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                    .body > .section > .articles > .primary-article > .primary > .image {
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                        object-fit: cover;
+                        transform: translate(0%, 0%);
+
+                        transition-timing-function: linear;
+                        transition: width 0.25s, height 0.25s, transform 0.25s;
+                    }
+
+                    .body > .section > .articles > .primary-article:hover > .primary > .image {
+                        width: 110%;
+                        height: 110%;
+                        transform: translate(-5%, -5%);
+                    }
+
+                    .body > .section > .articles > .primary-article > .primary > .shade {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+
+                        background-color: var(--transparent-gray);
+                        z-index: 1;
+
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+                    .body > .section > .articles > .primary-article:hover > .primary > .shade {
+                        background-color: var(--transparent-dark-gray);
+                    }
+
+                        .body > .section > .articles > .primary-article > .primary > .shade > .contents {
+                            /* background-color: red; */
+                            width: 100%;
+                            height: 15vh;
+                            padding-left: 1vw;
+                            padding-right: 1vw;
+                            padding-bottom: 2vh;
+                        }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > a > .title {
+                                font-size: 1.2rem;
+                                padding-right: 0.8vw;
+                                font-weight: bold;
+                                color: var(--white);
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > a > .title:hover {
+                                color: var(--gray);
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors {
+                                font-size: .80rem;
+                                padding-bottom: 1vh;
+                                color: var(--white);
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .authors > a:hover {
+                                color: var(--gray);
+                            }
+
+                            .body > .section > .articles > .primary-article > .primary > .shade > .contents > .snippet {
+                                font-size: .90rem;
+                                padding-bottom: 1vh;
+                                width: 90%;
+                                color: var(--white);
+                                text-align: justify;
+                                /* background-color: aquamarine; */
+                            }
+
+            .body > .section > .articles > .secondary-articles {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                gap: 2vh 0vw;
+                /* background-color: green; */
+            }
+
+                .body > .section > .articles > .secondary-articles > .secondary {
+                    /* background-color: aquamarine; */
+                    height: 20vh;
+                    width: 90%;
+                    border-radius: 20px;
+
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .shade {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+
+                    background-color: var(--transparent-gray);
+                    z-index: 1;
+
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .image {
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    object-fit: cover;
+                    transform: translate(0%, 0%);
+
+                    transition-timing-function: linear;
+                    transition: width 0.25s, height 0.25s, transform 0.25s;
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary:hover > .image {
+                    width: 110%;
+                    height: 110%;
+                    transform: translate(-5%, -5%);
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary:hover > .shade {
+                    background-color: var(--transparent-dark-gray);
+                }
+
+                .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents {
+                    /* background-color: red; */
+                    width: 90%;
+                    max-height: 20vh;
+                    min-height: 1vh;
+                    padding-left: 1vw;
+                    padding-right: 1vw;
+                    padding-bottom: 1vh;
+                }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > a > .title {
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                        color: var(--white);
+                    }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > a > .title:hover {
+                        color: var(--gray);
+                    }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors {
+                        font-size: .8rem;
+                        padding-bottom: 1vh;
+                        color: var(--white);
+                    }
+
+                    .body > .section > .articles > .secondary-articles > .secondary > .shade > .contents > .authors > a:hover {
+                        color: var(--gray);
+                    }

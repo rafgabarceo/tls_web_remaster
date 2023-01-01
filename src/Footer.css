@@ -1,0 +1,62 @@
+.wrapper > .footer {
+    background-color: var(--white);
+    min-height: 20vh;
+}
+
+.footer > hr {
+        width: 100%;
+        border-right : 0;
+        border-left: 0;
+        border-bottom: 0;
+        border-top: 2px solid var(--gray);
+    }
+
+    .footer > .content {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+        .footer > .content > .message {
+            padding-bottom: 5vh;
+            width: 35vw;
+        }
+
+        .footer > .content > hr {
+            width: 100%;
+            border-right : 0;
+            border-left: 0;
+            border-bottom: 0;
+            border-top: 2px solid var(--gray);
+        }
+
+        .footer > .content > .end {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+            .footer > .content > .end > span > #to-the-top:hover {
+                color: var(--dark-gray);
+                cursor: pointer;
+            }
+
+
+    .footer > .navbar {
+        height: 4vh;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding-left: 10vw;
+    }
+
+    .footer > .navbar > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        padding-right: 1vw;
+    }

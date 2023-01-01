@@ -4,28 +4,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>The LaSallian</title>
   </head>
   <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="wrapper">
+      <div class="header">
+        <img class="logo" src="./tls_logo.svg" alt=""/>
+      </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
+      <hr/>
+      <div class="navbar">
+        <img class="logo" src="./tls_logo_minimal_side.svg" alt=""/>
+        <div class="contents">
+          <a href="http://thelasallian.com/university" id="University">University</a>
+          <a href="http://thelasallian.com/university" id="Menagerie">Menagerie</a>
+          <a href="http://thelasallian.com/university" id="Sports">Sports</a>
+          <a href="http://thelasallian.com/university" id="Vanguard">Vanguard</a>
+          <a href="http://thelasallian.com/university" id="Opinion">Opinion</a>
+          <a href="http://thelasallian.com/university" id="About">About Us</a>
+          <span class="material-symbols-outlined search">search</span>
+        </div>
+      </div>
+      <hr/>
+      <div class="body" id="root">
+        <!-- Data goes in here -->
+      </div>
+      <div class="footer">
+        <hr/>
+        <div class="navbar">
+          <a href="http://www.facebook.com/"><img src="./facebook_icon.svg" style="height: 4vh;" alt=""/></a>
+          <a href="http://www.instagram.com/"><img src="./instagram_icon.svg" style="height: 4vh;" alt=""/></a>
+          <a href="http://www.twitter.com/"><img src="./twitter_icon.svg" style="height: 4vh;" alt=""/></a>
+          <a href="http://www.youtube.com/"><img src="./telegram_icon.svg" style="height: 4vh;" alt=""/></a>
+        </div>
+        <hr/>
+        <div class="content">
+          <div class="message">
+            <b>The LaSallian</b> is the official student publication of De La Salle University. It is of the students, by the students, and for the students. Our student writers, photographers, videographers, artists, and web managers are committed to the 61-year tradition of journalistic excellence and issue-oriented critical thinking.
+            <br/><br/>
+            502-A Bro. Connon Hall, De La Salle University, 2401 Taft Avenue
+            Manila, Philippines
+          </div>
+          <hr/>
+          <div class="end">
+            <span>© 2022 The LaSallian</span>
+            <span><a id="to-the-top">To the top</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="home.js" defer></script>
   </body>
 </html>
