@@ -2,12 +2,6 @@
 
 @mixin mobileNavbar($isMobile) {
     // add logic here
-    @if $isMobile {
-        display: none;
-    } @else {
-        display: block;
-    }
-
 }
 
 .navbar {
@@ -47,7 +41,6 @@
 
     @media only screen and (max-width: 590px) {
         grid-template-columns: auto 90% auto;
-        @include mobileNavbar($isMobile: true);
     }
 
     input {

@@ -3,11 +3,22 @@ import styles from '../styles/Home.module.scss';
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Navbar(props) {
+export default function Navbar() {
+    const [isSearchClicked, setIsSearchClicked] = useState(false);
+    const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+    const handleOnClickSearch = () => {
+        setIsSearchClicked(prevState => !prevState);
+    };
+
+    const handleOnClickMenu = () => {
+        setIsMenuClicked(prevState => !prevState);
+    };
+
     return (
         <div className={`${styles.navbar} sticky`}>
             <Link href="/" className={styles.nav_logo_link}><img className={`${styles.nav_logo} nav_logo`} alt="TLS logo"/></Link>
-            {props.isSearchClicked ? 
+            {isSearchClicked ? 
                 <ul>
                     <input type="text" /> 
                 </ul>
@@ -21,7 +32,7 @@ export default function Navbar(props) {
                     <Link href="/about"><li>About Us</li></Link>
                 </ul>
             }
-            <div className={styles.searchDiv}><img className={styles.search} onClick={props.handleOnClickSearch} src="./search.svg" alt="" /></div>
+            <div className={styles.searchDiv}><img className={styles.search} onClick={handleOnClickSearch} src="./search.svg" alt="" /></div>
         </div>
     );
 

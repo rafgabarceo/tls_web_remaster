@@ -1,56 +1,13 @@
 @import 'colors';
 
 @mixin mobileLogo($isMobile) {
-    // add logic here
     @if $isMobile {
-        position: sticky;
-        top: -1px;
-
-        display: grid;
-        grid-template-columns: auto 80% auto;
-        background-color: $white;
-        border-top: 2px $gray solid;
-        border-bottom: 2px $gray solid;
-
-        padding-left: 3vw;
-        padding-right: 3vw;
-
+        display: none;
         
-        .menuDiv {
-            display: block;
-
-            .menuImg {
-                height: 50px;
-            }
-        }
-
-        .searchDiv {
-            display: block;
-
-            .searchImg {
-                height: 50px;
-            }
-        }
-
-        .logoDiv {
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-
-                .logo_img {
-                    content: url("../public/tls-minimal.svg");
-                    height: 50px;
-                }
-            }
-        }
-        
-    }@else {
+    } @else {
+        display: flex;
         padding-top: 30px;
         padding-bottom: 30px;
-        display: flex;
         justify-content: center;
 
         @media only screen and (max-width: 1000px) {
@@ -58,47 +15,37 @@
             padding-bottom: 3%;
         }
 
-        .menuDiv {
-            display: none;
-        }
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
 
-        .searchDiv {
-            display: none;
-        }
+            .logoImg {
+                content: url("../public/tls.svg");
+                width: 800px;
 
-        .logoDiv {
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
+                @media only screen and (max-width: 1000px) {
+                    width: 80%;
+                }
 
-                .logo_img {
-                    content: url("../public/tls.svg");
-                    width: 800px;
-                    height: 90%;
-
-                    @media only screen and (max-width: 1000px) {
-                        width: 80%;
-                        height: 200px;
-                    }
-
-                    @media only screen and (max-width: 700px) {
-                        content: url("../public/tls-minimal.svg");
-                        height: 70px;
-                    }
+                @media only screen and (max-width: 600px) {
+                    content: url("../public/tls-minimal.svg");  
                 }
             }
         }
+
+        
     }
 }
 
 
-.logo {
+.logoDiv {
     @include mobileLogo($isMobile: false);
 
-    @media only screen and (max-width: 590px) {
+    @media only screen and (max-width: 520px) {
         @include mobileLogo($isMobile: true);
     }
 }
