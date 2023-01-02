@@ -1,5 +1,72 @@
 @import 'colors';
 
+@mixin footerMobile($isMobile) {
+    @if ($isMobile) {
+        background-color: $white;
+        position: sticky;
+        top: 612px;
+        height: 250px;
+
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px $gray solid;
+    }@else {
+        display: none;
+    }
+}
+
+@mixin menuNavbar($isMobile) {
+    @if ($isMobile) {
+        background-color: $white;
+        position: sticky;
+        top: 55px;
+
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px $gray solid;
+        
+        
+        li {
+            display: flex;
+            padding: 5vw;
+            font-size: 30px;
+            list-style: none;
+            border-top: 1px $gray solid;
+            border-bottom: 1px $gray solid;
+
+            .linkUniv {
+                color: $univ-color;
+            }
+
+            .linkMenage {
+                color: $menage-color;
+            }
+
+            .linkSports {
+                color: $sports-color;
+            }
+
+            .linkVanguard {
+                color: $vanguard-color;
+            }
+
+            .linkOpinion {
+                color: $opinion-color;
+            }
+        }
+
+        li:first-child {
+            border-top: 2px $gray solid;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+
+    }@else {
+        display: none;
+    }
+}
+
 @mixin mobileNavbar($isMobile) {
     // add logic here
     @if $isMobile {
@@ -12,7 +79,7 @@
         }
 
         .navLogoLinkDiv {
-            display: none;
+            display: none !important; // Uh-oh, the worst of them all. Never use !important, but blame Next.js and modules
         }
 
         .searchbar {
@@ -155,5 +222,21 @@
 
     @media only screen and (max-width: 525px) {
         @include mobileNavbar($isMobile: true);
+    }
+}
+
+.menuList {
+    @include menuNavbar($isMobile: false);
+
+    @media only screen and (max-width: 525px) {
+        @include menuNavbar($isMobile: true);
+    }
+}
+
+.footerMobile {
+    @include footerMobile($isMobile: false);
+
+    @media only screen and (max-width: 525px) {
+        @include footerMobile($isMobile: true);
     }
 }

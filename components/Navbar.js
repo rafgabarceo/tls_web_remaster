@@ -17,6 +17,7 @@ export default function Navbar() {
 
     // Now, you may be asking me why did you use a normal img tag? Because Next/Image doesn't actually put the real class names smh stupid ass software architecture design complexities...
     return (
+        <>
         <div className={`${styles.navbar} sticky`}>
             {isSearchClicked ? 
                 <>
@@ -27,7 +28,7 @@ export default function Navbar() {
                 </>
                 :
                 <>
-                    <div className={styles.menuDiv}><Image className={styles.menuImg} src="./menu.svg" width={50} height={50} alt="" /></div>
+                    <div className={styles.menuDiv}><Image className={styles.menuImg} onClick={handleOnClickMenu} src="./menu.svg" width={50} height={50} alt="" /></div>
                     <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} alt="TLS logo"/></Link> </div>
                     <div className={styles.logoImgMobile}>
                         <Link className={styles.logoImgMobileLink} href="/"><Image src="./tls-minimal.svg" width={220} height={50} alt="" /></Link>
@@ -44,6 +45,21 @@ export default function Navbar() {
             }
             <div className={styles.searchDiv}><Image className={styles.searchImg} onClick={handleOnClickSearch} src="./search.svg" width={50} height={50} alt="" /></div>
         </div>
+        {isMenuClicked ?
+                <>
+                    <ul className={styles.menuList}>
+                        <li><Link className={styles.linkUniv} href="/section/university">University</Link></li>
+                        <li><Link className={styles.linkMenage} href="/section/menagerie">Menagerie</Link></li>
+                        <li><Link className={styles.linkSports} href="/section/sports">Sports</Link></li>
+                        <li><Link className={styles.linkVanguard} href="/section/vanguard">Vanguard</Link></li>
+                        <li><Link className={styles.linkOpinion} href="/section/opinion">Opinion</Link></li>
+                        <li><Link className={styles.linkAbout} href="/about">About Us</Link></li>
+                    </ul>
+                </>
+            :
+                ""
+        }
+        </>
     );
 
 }
