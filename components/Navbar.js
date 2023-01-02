@@ -18,14 +18,17 @@ export default function Navbar() {
     // Now, you may be asking me why did you use a normal img tag? Because Next/Image doesn't actually put the real class names smh stupid ass software architecture design complexities...
     return (
         <div className={`${styles.navbar} sticky`}>
-            <div className={styles.menuDiv}><Image className={styles.menuImg} src="./menu.svg" width={50} height={50} alt="" /></div>
-            <Link href="/" className={styles.nav_logo_link}><img className={`${styles.navLogo} navLogo`} alt="TLS logo"/></Link> 
             {isSearchClicked ? 
-                <ul className={styles.searchbar}>
-                    <input type="text" /> 
-                </ul>
+                <>
+                    <div className={styles.closeDiv} href="/"><Image className={styles.closeImg} onClick={handleOnClickSearch} src="./close.svg" width={50} height={50}/></div> 
+                    <ul className={styles.searchbar}>
+                        <input type="text" /> 
+                    </ul>
+                </>
                 :
                 <>
+                    <div className={styles.menuDiv}><Image className={styles.menuImg} src="./menu.svg" width={50} height={50} alt="" /></div>
+                    <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} alt="TLS logo"/></Link> </div>
                     <div className={styles.logoImgMobile}>
                         <Link className={styles.logoImgMobileLink} href="/"><Image src="./tls-minimal.svg" width={220} height={50} alt="" /></Link>
                     </div>

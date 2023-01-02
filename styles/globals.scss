@@ -21,31 +21,48 @@ hr {
 
 // We need Modules for each CSS style we want in Next.js, unfortunately. So this guy's here...
 .sticky {
-    a {
+
+    .navLogoLinkDiv {
         display: flex;
         flex-direction: row-reverse;
-    }
-    
-    .navLogo {
-        content: url("../public/tls-minimal.svg");        
-        width: 0;
-        opacity: 0;
-        transition: opacity .2s;
-        transition-timing-function: ease-in;
+
+        a {
+            display: none;
+
+            .navLogo {
+                content: url("../public/tls-minimal.svg");        
+                width: 0;
+                opacity: 0;
+                transition: opacity .2s;
+                transition-timing-function: ease-in;
+            }
+        }
     }
 }
 
 .sticky.sticked {
     background-color: $white;
 
-    .navLogo {
-        content: url("../public/tls-minimal.svg");
-        opacity: 1;
-        width: 180px;
+    .navLogoLinkDiv {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        
+        a {
+            display: block;
 
-        @media only screen and (max-width: 800px) {
-            content: url("../public/tls-star.svg");
-            width: 50px;
+            .navLogo {
+                content: url("../public/tls-minimal.svg");
+                opacity: 1;
+                width: 180px;
+
+                @media only screen and (max-width: 800px) {
+                    content: url("../public/tls-star.svg");
+                    width: 50px;
+                }
+            }
         }
     }
 }
