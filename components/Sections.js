@@ -5,8 +5,8 @@ export default function Sections(props) {
     const sections = props.sections.map(section => <Section key={section.name} section={section}/>);
     return (
         <>
-            <h2>sections</h2>
             {sections}
+            <hr />
         </>
     );
 }

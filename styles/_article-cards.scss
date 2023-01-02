@@ -1,0 +1,23 @@
+
+.primary {
+    background-color: red;
+    width: 50%;
+}
+
+.secondary {
+    background-color: yellow;
+    width: 50%;
+}
+
+.section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: pink;
+    margin-bottom: 50px; //delete later
+
+    .articles {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-color: green;
+    }
+}
