@@ -1,19 +1,18 @@
-
-.primary {
-    background-color: red;
-    width: 50%;
-}
-
-.secondary {
-    background-color: yellow;
-    width: 50%;
-}
+@import 'colors', 'primary-article', 'secondary-article';
 
 .section {
     padding-left: 10vw;
     padding-right: 10vw;
-    background-color: pink;
-    margin-bottom: 50px; //delete later
+
+    hr {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .sectionName {
+        font-size: 40px;
+    }
 
     .articles {
         display: grid;

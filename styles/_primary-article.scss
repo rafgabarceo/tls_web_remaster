@@ -1,0 +1,64 @@
+.primary {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+
+    position: relative;
+    z-index: 1;
+    
+    .primaryCard {
+        width: 600px;
+        height: 100%;
+        border-radius: 20px;
+        overflow:hidden;
+
+        position: relative;
+        z-index: 0;
+
+        .primaryCardShade {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+
+            position: absolute;
+            z-index: 1;
+            background-color: $transparent-gray;
+        }
+
+        .primaryImg {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+
+            position: absolute;
+            z-index: -1;
+
+            transition: width 0.2s, height 0.2s, transform 0.2s;
+        }
+
+        .primaryLink {
+            background-color: red;
+            
+            .cardContainer {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+
+                position: absolute;
+                z-index: 1;
+                color: $white;
+                margin-bottom: 50px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
+
+        
+    }
+
+}

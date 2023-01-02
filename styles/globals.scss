@@ -13,10 +13,28 @@ a {
 }
 
 hr {
-    border-top: 1px $gray solid;
-    border-bottom: 0 none;
-    border-left: 0 none;
-    border-right: 0 none;
+    border: none;
+    border-top: 2px $gray solid;
+}
+
+.University {
+    color: $univ-color;
+}
+
+.Menagerie {
+    color: $menage-color;
+}
+
+.Sports {
+    color: $sports-color;
+}
+
+.Vanguard {
+    color: $vanguard-color;
+}
+
+.Opinion {
+    color: $opinion-color;
 }
 
 // We need Modules for each CSS style we want in Next.js, unfortunately. So this guy's here...

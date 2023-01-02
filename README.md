@@ -13,3 +13,4 @@ TLS website remaster with Next.js + Bootstrap + Sass
 - [x] Integrate dynamic sizing for different screens (Header)
 - [ ] Integrate dynamic sizing for different screens (Body)
 - [ ] Integrate dynamic sizing for different screens (Footer)
+- [ ] Move all of static images from `/public/` to `/public/images/`
