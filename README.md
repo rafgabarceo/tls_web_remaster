@@ -9,5 +9,7 @@ TLS website remaster with Next.js + Bootstrap + Sass
 6. Run `npm run dev` via CLI to start the website at [http://localhost:3000](http://localhost:3000)
 
 # To do
-- Replace .css with .sass files
-- Integrate dynamic sizing for different screens
+- [x] Replace .css with .sass files
+- [x] Integrate dynamic sizing for different screens (Header)
+- [ ] Integrate dynamic sizing for different screens (Body)
+- [ ] Integrate dynamic sizing for different screens (Footer)
