@@ -26,7 +26,7 @@ hr {
         flex-direction: row-reverse;
     }
     
-    .nav_logo {
+    .navLogo {
         content: url("../public/tls-minimal.svg");        
         width: 0;
         opacity: 0;
@@ -38,7 +38,7 @@ hr {
 .sticky.sticked {
     background-color: $white;
 
-    .nav_logo {
+    .navLogo {
         content: url("../public/tls-minimal.svg");
         opacity: 1;
         width: 180px;

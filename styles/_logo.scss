@@ -45,7 +45,7 @@
 .logoDiv {
     @include mobileLogo($isMobile: false);
 
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: 525px) {
         @include mobileLogo($isMobile: true);
     }
 }
