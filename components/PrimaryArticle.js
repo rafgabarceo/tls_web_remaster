@@ -3,16 +3,16 @@ import styles from '../styles/Home.module.scss';
 
 export default function PrimaryArticle({article}) {
 
-    console.log(article.title.rendered);
-    console.log(article.title.rendered.length);
+    function cleanExcerpt(title, excerpt) {
+        const charCountLimit = (title.length > 40)? 150 : 300; //Fits 155 ideally, but add allowance
 
-    const charCountLimit = (article.title.rendered.length > 40)? 150 : 300; //Fits 155 ideally, but add allowance
-    let excerptUncleaned = article.excerpt.rendered;
+        let endTagIndex = excerpt.indexOf("</");
+        excerpt = excerpt.substring(0,endTagIndex);
+        let lastSpaceIndex = excerpt.substring(0,charCountLimit).lastIndexOf(" ");
+        return excerpt.substring(0,lastSpaceIndex)+`... <span class=${styles.readMore}>Read more</span></p>`;
+    }
 
-    let endTagIndex = excerptUncleaned.indexOf("</");
-    excerptUncleaned = excerptUncleaned.substring(0,endTagIndex);
-    let lastSpaceIndex = excerptUncleaned.substring(0,charCountLimit).lastIndexOf(" ");
-    let cleanedExcerpt = excerptUncleaned.substring(0,lastSpaceIndex)+`... <span class=${styles.readMore}>Read more</span></p>`;
+    const excerpt = cleanExcerpt(article.title.rendered, article.excerpt.rendered);
 
     return (
             <div className={styles.primary}>
@@ -23,7 +23,7 @@ export default function PrimaryArticle({article}) {
                             {/* We have to use divs here and not p, h1, and other text components or else you'll cause hydration errors */}
                             <div className={styles.headline} dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
                             <div className={styles.author}>by me</div>
-                            <div className={styles.snippet} dangerouslySetInnerHTML={{__html: cleanedExcerpt}}/>
+                            <div className={styles.snippet} dangerouslySetInnerHTML={{__html: excerpt}}/>
                         </div>
                     </Link>
                     <img className={styles.img} src={article.jetpack_featured_media_url} />
