@@ -193,7 +193,7 @@
 }
 
 .navbar {
-    z-index: 2;
+    z-index: 100;
     @include mobileNavbar($isMobile: false);
 
     @media only screen and (max-width: 1680px) {
@@ -227,7 +227,7 @@
 }
 
 .menuList {
-    z-index: 2;
+    z-index: 100;
     @include menuNavbar($isMobile: false);
 
     @media only screen and (max-width: 525px) {
@@ -236,7 +236,7 @@
 }
 
 .footerMobile {
-    z-index: 2;
+    z-index: 100;
     
     @include footerMobile($isMobile: false);
 

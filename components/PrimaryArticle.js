@@ -7,7 +7,12 @@ export default function PrimaryArticle({article}) {
                 <div className={styles.card}>
                     
                     <Link className={styles.articleLink} href={`/presents/${article.slug}`}>
-                        
+                        <div className={styles.content}>
+                            {/* We have to use divs here and not p, h1, and other text components or else you'll cause hydration errors */}
+                            <div className={styles.headline} dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
+                            <div className={styles.author}>by me</div>
+                            <div className={styles.snippet} dangerouslySetInnerHTML={{__html: article.excerpt.rendered}}/>
+                        </div>
                     </Link>
                     <img className={styles.img} src={article.jetpack_featured_media_url} />
                 </div>
