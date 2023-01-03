@@ -2,13 +2,17 @@ import Link from "next/link";
 import styles from '../styles/Home.module.scss';
 
 export default function PrimaryArticle({article}) {
-    const charCountLimit = 150; //Fits 155 ideally, but add allowance
+
+    console.log(article.title.rendered);
+    console.log(article.title.rendered.length);
+
+    const charCountLimit = (article.title.rendered.length > 40)? 150 : 300; //Fits 155 ideally, but add allowance
     let excerptUncleaned = article.excerpt.rendered;
 
     let endTagIndex = excerptUncleaned.indexOf("</");
     excerptUncleaned = excerptUncleaned.substring(0,endTagIndex);
     let lastSpaceIndex = excerptUncleaned.substring(0,charCountLimit).lastIndexOf(" ");
-    let cleanedExcerpt = excerptUncleaned.substring(0,lastSpaceIndex)+"... Read More</p>";
+    let cleanedExcerpt = excerptUncleaned.substring(0,lastSpaceIndex)+`... <span class=${styles.readMore}>Read more</span></p>`;
 
     return (
             <div className={styles.primary}>

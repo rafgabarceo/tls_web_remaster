@@ -57,6 +57,12 @@
                 .snippet {
                     padding-top: 1vh;
                     font-size: 15px;
+
+                    .readMore {
+                        &:hover {
+                            color: $gray;
+                        }
+                    }
                 }
             }
         }
