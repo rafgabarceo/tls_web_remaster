@@ -45,7 +45,7 @@ hr {
         flex-direction: row-reverse;
 
         a {
-            display: none;
+            // display: none;
 
             .navLogo {
                 content: url("../public/tls-minimal.svg");        
@@ -76,7 +76,7 @@ hr {
                 opacity: 1;
                 width: 180px;
 
-                @media only screen and (max-width: 800px) {
+                @media only screen and (max-width: 900px) {
                     content: url("../public/tls-star.svg");
                     width: 50px;
                 }
