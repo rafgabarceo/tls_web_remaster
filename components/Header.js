@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <>
             <div className={styles.logoDiv}>
-                <Link href='/'><Image className={styles.logoImg} alt="TLS logo"/></Link>
+                <Link href='/'><img className={styles.logoImg} alt="TLS logo" /></Link>
             </div>
             <Navbar />
         </>
