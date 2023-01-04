@@ -12,7 +12,48 @@ export default function PrimaryArticle({article}) {
         return excerpt.substring(0,lastSpaceIndex)+`... <span class=${styles.readMore}>Read more</span></p>`;
     }
 
+    function listAuthors(authors){
+        //TODO: Optimize this function
+
+        return authors.map((author, index) =>
+            {if(authors.length > 2) {
+                if(index == (authors.length - 1)) {
+                    return (
+                        <>
+                            <span> and </span><Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                        </>
+                    );
+                } else {
+                    return (
+                        <>
+                            <Link href={`/by/${author.slug}`}>{author.display_name}</Link><span>, </span>
+                        </>
+                    );
+                }
+            } else if(authors.length == 2) {
+                if(index == (authors.length - 1)) {
+                    return (
+                        <>
+                            <span> and </span><Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                        </>
+                    );
+                } else {
+                    return (
+                        <Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                    );
+                }
+            } else  {
+                return (
+                    <>
+                        <Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                    </>
+                )
+            }}
+        );
+    }
+
     const excerpt = cleanExcerpt(article.title.rendered, article.excerpt.rendered);
+    const authors = listAuthors(article.authors);
 
     return (
             <div className={styles.primary}>
@@ -21,7 +62,7 @@ export default function PrimaryArticle({article}) {
                         <div className={styles.content}>
                             {/* We have to use divs here and not p, h1, and other text components or else you'll cause hydration errors */}
                             <div className={styles.headline} dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
-                            <div className={styles.author}>by me</div>
+                            <div className={styles.author}>by {authors}</div>
                             <div className={styles.snippet} dangerouslySetInnerHTML={{__html: excerpt}}/>
                         </div>
                     </Link>
