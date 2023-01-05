@@ -35,7 +35,7 @@ export default function Footer() {
                             Powered by Depression
                         </div>
                         <div className={styles.toTheTop}>
-                            To the top
+                            <a id="toTheTop">To the top</a>
                         </div>
                     </div>
                 </div>
