@@ -49,21 +49,9 @@
                     }
                 }
 
-                .author {
+                .authors {
                     font-size: 14px;
                     color: $white;
-
-                    span {
-                        color: $white;
-                    }
-
-                    a {
-                        color: $white;
-
-                        &:hover {
-                            color: $gray;
-                        }
-                    }
                 }
 
                 .snippet {

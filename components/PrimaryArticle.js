@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from '../styles/Home.module.scss';
 
+import {useEffect, useState} from 'react';
+
 export default function PrimaryArticle({article}) {
 
     function cleanExcerpt(title, excerpt) {
@@ -14,19 +16,20 @@ export default function PrimaryArticle({article}) {
 
     function listAuthors(authors){
         //TODO: Optimize this function
+        //DYK you can actually add <Link></Link> in between these? Too bad there will be hydration errors. TODO: Learn more about hydration errors...
 
         return authors.map((author, index) =>
             {if(authors.length > 2) {
                 if(index == (authors.length - 1)) {
                     return (
                         <>
-                            <span> and </span><Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                            <span> and {author.display_name}</span>
                         </>
                     );
                 } else {
                     return (
                         <>
-                            <Link href={`/by/${author.slug}`}>{author.display_name}</Link><span>, </span>
+                            <span>{author.display_name}, </span>
                         </>
                     );
                 }
@@ -34,18 +37,18 @@ export default function PrimaryArticle({article}) {
                 if(index == (authors.length - 1)) {
                     return (
                         <>
-                            <span> and </span><Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                            <span> and {author.display_name}</span>
                         </>
                     );
                 } else {
                     return (
-                        <Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                        <span>{author.display_name}</span>
                     );
                 }
             } else  {
                 return (
                     <>
-                        <Link href={`/by/${author.slug}`}>{author.display_name}</Link>
+                        <span>{author.display_name}</span>
                     </>
                 )
             }}
@@ -62,7 +65,9 @@ export default function PrimaryArticle({article}) {
                         <div className={styles.content}>
                             {/* We have to use divs here and not p, h1, and other text components or else you'll cause hydration errors */}
                             <div className={styles.headline} dangerouslySetInnerHTML={{__html: article.title.rendered}}/>
-                            <div className={styles.author}>by {authors}</div>
+                            <div className={styles.authors}>
+                               by {authors}
+                            </div>
                             <div className={styles.snippet} dangerouslySetInnerHTML={{__html: excerpt}}/>
                         </div>
                     </Link>
