@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.scss';
 
 export default function BannerArticles({sections}) {
     const bannerArticles = sections.map(section => 
-        <SwiperSlide key={`swi-${section.name}`}>
+        <SwiperSlide key={`swiperSlide-${section.name}`}>
             <BannerArticle key={`ban-${section.name}`} article={section.articles[0]}/>
         </SwiperSlide>
     );
