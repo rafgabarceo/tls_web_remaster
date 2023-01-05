@@ -14,3 +14,4 @@ TLS website remaster with Next.js + Bootstrap + Sass
 - [ ] Integrate dynamic sizing for different screens (Body)
 - [ ] Integrate dynamic sizing for different screens (Footer)
 - [ ] Move all of static images from `/public/` to `/public/images/`
+- [ ] Solve the key issues. Like wtf?? How come the unique names are not unique??

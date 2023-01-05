@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.scss';
 export default function SecondaryArticle({article}) {
 
     function cleanTitle(title) {
-        console.log(title);
         const charCountLimit = 70;
 
         if(title.length > charCountLimit) {
