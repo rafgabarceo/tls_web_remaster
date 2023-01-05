@@ -177,6 +177,12 @@
             list-style: none;
             align-items: center;
 
+            .sectionLink {
+                &:hover {
+                    color: $dark-gray;
+                }
+            }
+
             li {
                 display: inline-block;
                 margin-left: 1vw;
