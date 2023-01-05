@@ -60,19 +60,16 @@ export default function SecondaryArticle({article}) {
     const authors = listAuthors(article.authors);
 
     return (
-        <div className={styles.secondaryContainer}>
-            <div className={styles.card}>
-                <Link className={styles.articleLink} href={`/presents/${article.slug}`}>
-                    <div className={styles.content}>
-                        {/* We have to use divs here and not p, h1, and other text components or else you'll cause hydration errors */}
-                        <div className={styles.authors}>
-                            by {authors}
-                        </div> 
-                        <div className={styles.headline} dangerouslySetInnerHTML={{__html: title}}/>
-                    </div>
-                </Link>
-                <img className={styles.img} src={article.jetpack_featured_media_url} />
-            </div>
+        <div className={styles.card}>
+            <Link className={styles.articleLink} href={`/presents/${article.slug}`}>
+                <div className={styles.content}>
+                    <div className={styles.authors}>
+                        by {authors}
+                    </div> 
+                    <div className={styles.headline} dangerouslySetInnerHTML={{__html: title}}/>
+                </div>
+            </Link>
+            <img className={styles.img} src={article.jetpack_featured_media_url} />
         </div>
         
     );

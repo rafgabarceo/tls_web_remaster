@@ -1,8 +1,11 @@
 @import 'colors', 'primary-article', 'secondary-article';
 
 .section {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    max-width: 100%;
+    height: 100%;
+    
+    padding-left: 12vw;
+    padding-right: 12vw;
 
     hr {
         margin-top: 50px;
@@ -12,13 +15,14 @@
 
     .sectionName {
         font-size: 40px;
+        padding-bottom: 2vh;
     }
 
     .articles {
         display: grid;
-        grid-template-columns: 50% 50%;
-        background-color: pink;
+        grid-template-columns: 5fr 5fr;
+        column-gap: 15px;
         height: 400px;
-
+        max-width: 100%;
     }
 }

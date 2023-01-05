@@ -3,7 +3,6 @@ import SecondaryArticles from "./SecondaryArticles";
 
 import styles from '../styles/Home.module.scss';
 
-import { useState } from "react";
 import Link from "next/link";
 
 export default function Section({section}) {
