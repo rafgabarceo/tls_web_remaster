@@ -8,8 +8,8 @@ import styles from '../styles/Home.module.scss';
 
 export default function BannerArticles({sections}) {
     const bannerArticles = sections.map(section => 
-        <SwiperSlide>
-            <BannerArticle article={section.articles[0]}/>
+        <SwiperSlide key={`swi-${section.name}`}>
+            <BannerArticle key={`ban-${section.name}`} article={section.articles[0]}/>
         </SwiperSlide>
     );
 
@@ -28,10 +28,11 @@ export default function BannerArticles({sections}) {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
+                style={{borderRadius: "20px"}}
             >
                 {bannerArticles}
             </Swiper>
-            <hr />
+            <hr className={styles.bannerHr}/>
         </div>
     );
 }

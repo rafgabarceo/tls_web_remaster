@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 700px) {
+        height: 300px;
+    }
+
     .card {
         height: 100%;
         width: 100%;
