@@ -20,9 +20,23 @@
 
     .articles {
         display: grid;
-        grid-template-columns: 5fr 5fr;
+        grid-template: "a b" 5fr;
         column-gap: 15px;
         height: 400px;
         max-width: 100%;
+
+        @media only screen and (max-width: 800px) {
+            //turn from grid column to row
+            grid-template: "a" 50fr "b" 50fr;
+            column-gap: 0px;
+            row-gap: 15px;
+            height: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 1600px) {
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 }
+

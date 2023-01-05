@@ -1,11 +1,10 @@
 .secondary {
     // background-color: yellow;
-
+    height: 100%;
     display: grid;
     grid-template-columns: 5fr 5fr;
     row-gap: 15px;
     column-gap: 15px;
-
 
     .card {
         height: 100%;
@@ -56,6 +55,10 @@
 
                 .authors {
                     font-size: 14px;
+
+                    @media only screen and (max-width: 1000px) {
+                        display: none;
+                    }
                 }
             }
         }
