@@ -1,4 +1,5 @@
 import Section from "./Section";
+import styles from '../styles/Home.module.scss';
 
 export default function Sections(props) {
     //I didn't deconstruct {sections} because I really wanted to use the sections variable name lmao
@@ -6,7 +7,7 @@ export default function Sections(props) {
     return (
         <>
             {sections}
-            <hr />
+            <hr className={styles.sectionsHr}/>
         </>
     );
 }
