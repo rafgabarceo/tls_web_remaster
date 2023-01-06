@@ -9,5 +9,10 @@ TLS website remaster with Next.js + Bootstrap + Sass
 6. Run `npm run dev` via CLI to start the website at [http://localhost:3000](http://localhost:3000)
 
 # To do
-- Replace .css with .sass files
-- Integrate dynamic sizing for different screens
+- [x] Replace .css with .sass files
+- [x] Integrate dynamic sizing for different screens (Header)
+- [x] Integrate dynamic sizing for different screens (Body)
+- [x] Integrate dynamic sizing for different screens (Footer)
+- [ ] Move all of static images from `/public/` to `/public/images/`
+- [ ] Solve the key issues. Like wtf?? How come the unique names are not unique??
+- [ ] Codebase cleanup

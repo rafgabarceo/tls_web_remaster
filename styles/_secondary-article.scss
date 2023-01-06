@@ -1,0 +1,76 @@
+.secondary {
+    // background-color: yellow;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    row-gap: 15px;
+    column-gap: 15px;
+
+    .card {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        .articleLink {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $transparent-gray;
+            z-index: 2;
+
+            &:hover {
+                background-color: $transparent-dark-gray;
+            }
+
+            &:hover + .img {
+                width: 110%;
+                height: 110%;
+                transform: translate(-5%, -5%);
+            }
+
+            .content {
+                position: absolute;
+                max-width: 100%;
+                min-height: 42%;
+                
+                color: $white;
+                bottom: 0px;
+                padding-left: 1vw;
+                padding-right: 1vw;
+                padding-bottom: 1vh;
+
+                display: flex;
+                flex-direction: column-reverse;
+
+                .headline {
+                    font-weight: 600;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: $gray;
+                    }
+                }
+
+                .authors {
+                    font-size: 14px;
+
+                    @media only screen and (max-width: 1000px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        .img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: width 0.2s, height 0.2s, transform 0.2s;
+        }
+    }
+}
+
