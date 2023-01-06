@@ -7,6 +7,8 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+
+// TODO: Remove this portion and localize it
 a {
     text-decoration: none;
     color: inherit;
@@ -36,6 +38,7 @@ hr {
 .Opinion {
     color: $opinion-color;
 }
+// Until here ^^^^^^^^^^^^^^^^
 
 // We need Modules for each CSS style we want in Next.js, unfortunately. So this guy's here...
 .sticky {
@@ -45,8 +48,6 @@ hr {
         flex-direction: row-reverse;
 
         a {
-            // display: none;
-
             .navLogo {
                 content: url("../public/tls-minimal.svg");        
                 width: 0;

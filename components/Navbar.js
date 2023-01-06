@@ -29,7 +29,7 @@ export default function Navbar() {
                 :
                 <>
                     <div className={styles.menuDiv}><Image className={styles.menuImg} onClick={handleOnClickMenu} src="./menu.svg" width={50} height={50} alt="" /></div>
-                    <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} alt="TLS logo"/></Link> </div>
+                    <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} src="./tls-minimal.svg" alt="TLS logo"/></Link></div>
                     <div className={styles.logoImgMobile}>
                         <Link className={styles.logoImgMobileLink} href="/"><Image src="./tls-minimal.svg" width={220} height={50} alt="" /></Link>
                     </div>
