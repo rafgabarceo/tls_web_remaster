@@ -29,17 +29,17 @@ export default function Navbar() {
                 :
                 <>
                     <div className={styles.menuDiv}><Image className={styles.menuImg} onClick={handleOnClickMenu} src="./menu.svg" width={50} height={50} alt="" /></div>
-                    <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} alt="TLS logo"/></Link> </div>
+                    <div className={`navLogoLinkDiv ${styles.navLogoLinkDiv}`}><Link href="/"><img className={`${styles.navLogo} navLogo`} src="./tls-minimal.svg" alt="TLS logo"/></Link></div>
                     <div className={styles.logoImgMobile}>
                         <Link className={styles.logoImgMobileLink} href="/"><Image src="./tls-minimal.svg" width={220} height={50} alt="" /></Link>
                     </div>
                     <ul className={styles.list}>
-                        <Link href="/section/university"><li>University</li></Link>
-                        <Link href="/section/menagerie"><li>Menagerie</li></Link>
-                        <Link href="/section/sports"><li>Sports</li></Link>
-                        <Link href="/section/vanguard"><li>Vanguard</li></Link>
-                        <Link href="/section/opinion"><li>Opinion</li></Link>
-                        <Link href="/about"><li>About Us</li></Link>
+                        <Link className={styles.sectionLink} href="/section/university"><li>University</li></Link>
+                        <Link className={styles.sectionLink} href="/section/menagerie"><li>Menagerie</li></Link>
+                        <Link className={styles.sectionLink} href="/section/sports"><li>Sports</li></Link>
+                        <Link className={styles.sectionLink} href="/section/vanguard"><li>Vanguard</li></Link>
+                        <Link className={styles.sectionLink} href="/section/opinion"><li>Opinion</li></Link>
+                        <Link className={styles.sectionLink} href="/about"><li>About Us</li></Link>
                     </ul>
                 </>
             }
